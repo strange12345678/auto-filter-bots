@@ -145,7 +145,7 @@ async def update_verify_status(user_id, verify_token="", is_verified=False, link
 async def get_premium_status(user_id):
     premium = temp.PREMIUM.get(user_id)
     if not premium:
-        premium = await db.get_premium_status(user_id)
+        premium = await update_premium_status(user_id)
         temp.PREMIUM[user_id] = verify
     return premium
 
