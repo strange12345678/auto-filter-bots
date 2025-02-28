@@ -20,7 +20,7 @@ async def start(client, message):
     except:
         await message.react(emoji="⚡️", big=True)
     d = await client.send_sticker(message.chat.id, random.choice(STICKERS))
-    await asyncio.slepp(2)
+    await asyncio.sleep(2)
     await d.delete()
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         if not await db.get_chat(message.chat.id):
