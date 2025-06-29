@@ -117,7 +117,7 @@ PAYMENT_QR = environ.get('PAYMENT_QR', 'https://envs.sh/AH.jpg
 ')
 if len(PAYMENT_QR) == 0:
     print('Info - PAYMENT_QR is empty')
-OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '')  #if you not have UPI, then use another method
+OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '@darkworld008')  #if you not have UPI, then use another method
 if len(OWNER_UPI_ID) == 0:
     print('Info - OWNER_UPI_ID is empty')
 if len(PAYMENT_QR) == 0 or len(OWNER_UPI_ID) == 0:
