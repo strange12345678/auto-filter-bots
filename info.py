@@ -55,7 +55,7 @@ if len(LOG_CHANNEL) == 0:
     exit()
 else:
     LOG_CHANNEL = int(LOG_CHANNEL)
-FORCE_SUB_CHANNELS = [int(fsub_channels) if fsub_channels.startswith("-") else fsub_channels for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '').split()]
+FORCE_SUB_CHANNELS = [int(fsub_channels) if fsub_channels.startswith("-") else fsub_channels for fsub_channels in environ.get('FORCE_SUB_CHANNELS', '-1001883211404').split()]
 if len(FORCE_SUB_CHANNELS) == 0:
     print('Info - FORCE_SUB_CHANNELS is empty')
     
@@ -113,7 +113,8 @@ SHORTLINK = is_enabled('SHORTLINK', False)
 
 #premium info
 IS_PREMIUM = is_enabled('IS_PREMIUM', True)
-PAYMENT_QR = environ.get('PAYMENT_QR', '')
+PAYMENT_QR = environ.get('PAYMENT_QR', 'https://envs.sh/AH.jpg
+')
 if len(PAYMENT_QR) == 0:
     print('Info - PAYMENT_QR is empty')
 OWNER_UPI_ID = environ.get('OWNER_UPI_ID', '')  #if you not have UPI, then use another method
